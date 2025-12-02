@@ -7,10 +7,10 @@ from tkinter.ttk import Style
 import pandas as pd
 import matplotlib.pyplot as plt
 
-sys.path.append(os.path.relpath("First-Come-First-Serve-scheduling"))
-sys.path.append(os.path.relpath("Priority-Scheduling"))
-sys.path.append(os.path.relpath("Round-Robin-scheduling"))
-sys.path.append(os.path.relpath("Shortest-Job-First-scheduling"))
+# sys.path.append(os.path.relpath("First-Come-First-Serve-scheduling"))
+# sys.path.append(os.path.relpath("Priority-Scheduling"))
+# sys.path.append(os.path.relpath("Round-Robin-scheduling"))
+# sys.path.append(os.path.relpath("Shortest-Job-First-scheduling"))
 
 from FCFS.FCFS import simulate_fcfs_algorithm
 from RoundRobinScheduling.RR import simulate_rr_algorithm
@@ -79,29 +79,29 @@ class StartPage(tk.Frame):
         tk.Frame.__init__(self, parent)
         self.config(bg='#081547')
 
-        label = ttk.Label(self, text="CPU Scheduling algorithms simulator", font=LARGE_FONT)
-        label.place(x=0, y=0)
+        label = ttk.Label(self, text="Group Two Scheduling algorithms simulator", font=LARGE_FONT)
+        label.place(x=10, y=0)
 
         button1 = ttk.Button(self, text="FCFS", command=lambda: controller.show_frame(FCFS))
         button1.place(x=50, y=100)
 
         button2 = ttk.Button(self, text="SJF NP", command=lambda: controller.show_frame(SJF_np))
-        button2.place(x=300, y=100)
+        button2.place(x=500, y=100)
 
         button3 = ttk.Button(self, text="SJF P", command=lambda: controller.show_frame(SJF_p))
-        button3.place(x=50, y=200)
+        button3.place(x=50, y=225)
 
         button4 = ttk.Button(self, text="RR", command=lambda: controller.show_frame(RR))
-        button4.place(x=300, y=200)
+        button4.place(x=500, y=225)
 
         button5 = ttk.Button(self, text="Priority NP", command=lambda: controller.show_frame(PriorityNP))
-        button5.place(x=50, y=300)
+        button5.place(x=50, y=350)
 
         button6 = ttk.Button(self, text="Priority P", command=lambda: controller.show_frame(PriorityP))
-        button6.place(x=300, y=300)
+        button6.place(x=500, y=350)
 
         button7 = ttk.Button(self, text="Chart", command=lambda: controller.show_frame(Chart))
-        button7.place(x=180, y=400)
+        button7.place(x=280, y=500)
 
 
 def print_result(root, result):
@@ -138,7 +138,7 @@ class FCFS(tk.Frame):
         print_result(self, result)
 
         button1 = ttk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=20, y=450)
+        button1.place(x=20, y=500)
 
 
 class SJF_np(tk.Frame):
@@ -154,7 +154,7 @@ class SJF_np(tk.Frame):
         print_result(self, result)
 
         button1 = ttk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=20, y=450)
+        button1.place(x=20, y=500)
 
 
 class SJF_p(tk.Frame):
@@ -170,7 +170,7 @@ class SJF_p(tk.Frame):
         print_result(self, result)
 
         button1 = ttk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=20, y=450)
+        button1.place(x=20, y=500)
 
 
 class RR(tk.Frame):
@@ -186,7 +186,7 @@ class RR(tk.Frame):
         print_result(self, result)
 
         button1 = ttk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=20, y=450)
+        button1.place(x=20, y=500)
 
 
 class PriorityNP(tk.Frame):
@@ -202,7 +202,7 @@ class PriorityNP(tk.Frame):
         print_result(self, result)
 
         button1 = ttk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=20, y=450)
+        button1.place(x=20, y=500)
 
 
 class PriorityP(tk.Frame):
@@ -218,7 +218,7 @@ class PriorityP(tk.Frame):
         print_result(self, result)
 
         button1 = ttk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=20, y=450)
+        button1.place(x=20, y=500)
 
 
 class Chart(tk.Frame):
@@ -250,7 +250,7 @@ class Chart(tk.Frame):
         button.place(x=190, y=240)
 
         button1 = ttk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=20, y=450)
+        button1.place(x=20, y=500)
 
 
 if __name__ == "__main__":
@@ -262,7 +262,7 @@ if __name__ == "__main__":
     art_arr = []
 
     app = tkinterApp()
-    app.wm_geometry("600x500")
-    app.title('CPU Scheduling Algorithms Simulator')
+    app.wm_geometry("720x600")
+    app.title('Oparating System Assignment Two')
     app.resizable(False, False)
     app.mainloop()
