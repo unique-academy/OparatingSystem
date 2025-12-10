@@ -73,7 +73,7 @@ class tkinterApp(tk.Tk):
         frame = self.frames[cont]
         frame.tkraise()
 
-
+#home page of the current project
 class StartPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
@@ -103,7 +103,7 @@ class StartPage(tk.Frame):
         button7 = ttk.Button(self, text="Chart", command=lambda: controller.show_frame(Chart))
         button7.place(x=280, y=500)
 
-
+#the output page of the project
 def print_result(root, result):
     label = ttk.Label(root, text=f"Number of processes = {result['n']}", font=LARGE_FONT, foreground='yellow')
     label.place(x=20, y=100)
@@ -124,7 +124,7 @@ def set_data_for_chart(result):
     att_arr.append(float(result['att']))
     art_arr.append(float(result['art']))
 
-
+#Algorithim based output starts from here
 class FCFS(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -220,7 +220,7 @@ class PriorityP(tk.Frame):
         button1 = ttk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         button1.place(x=20, y=500)
 
-
+#the chart class, displaying allalgorithimsin summary with its waiting and turn arround time
 class Chart(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
